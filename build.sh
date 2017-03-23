@@ -33,7 +33,7 @@ check_file $IMAGE_DOCKERFILE
 image_exist $REGISTRY_IMAGE_NAME
 
 if [ "0" != "$?" ];then
-	if [ $2 = '-f' ];then
+	if [ "$2" = '-f' ];then
 		remove_image $IMAGE_NAME
 		remove_image $REGISTRY_IMAGE_NAME
 	else
